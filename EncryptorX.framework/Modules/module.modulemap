@@ -1,0 +1,11 @@
+framework module EncryptorX {
+  umbrella header "EncryptorX.h"
+
+  export *
+  module * { export * }
+}
+
+module EncryptorX.Swift {
+    header "EncryptorX-Swift.h"
+    requires objc
+}

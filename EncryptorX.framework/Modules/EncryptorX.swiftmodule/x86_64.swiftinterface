@@ -1,0 +1,16 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name EncryptorX
+import CommonCrypto
+import CryptoSwift
+@_exported import EncryptorX
+import Foundation
+import Swift
+extension String {
+  public func aesEncrypt(key: Swift.String, iv: Swift.String) throws -> Swift.String
+  public func aesDecrypt(key: Swift.String, iv: Swift.String) throws -> Swift.String
+  public func convertToSHA256() -> Swift.String
+}
+extension Encodable {
+  public func encrypt(encryptionKey: Swift.String) throws -> Swift.String?
+}
